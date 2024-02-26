@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1170px;
+  margin: auto;
+}
+
+header {
+  background: url("wpp3.jpg");
+  height: 100vh;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.nav-area{
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+.nav-area li{
+	display: inline-block;
+}
+.nav-area li a{
+	color: #fff;
+	text-decorations: none;
+	padding: 5px 20px;
+	tonf-family:poppins;
+	font-size: 14px;
+	
+}
+.nav-area li a:hover{
+	background: #fff;
+	color: #333;
+}
+.logo img{
+	width: 100px;
+	float: left;
+	height:auto;
+}
+.welcome-text{
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin-left: 500px;
+	margin-top: 10px;
+	text-align: center;
+}
+.welcome-text h1{
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 60px;
+}
+.welcome-text a{
+	border: 2px solid #4e3822;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+}
+.welcome-text a:hover{
+	background: #fff;
+	color: #333;
+}
+.topnav {
+	overflow: hidden;
+	background-color: #4e3822;
+  }
+  
+  .topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  
+  .topnav a:hover {
+	background-color: #ddd;
+	color: black;
+  }
+  
+  .topnav a.active {
+	background-color: chocolate;
+	color: white;
+  }
+  
+  .topnav-right {
+	float: right;
+  }

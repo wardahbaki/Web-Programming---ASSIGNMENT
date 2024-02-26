@@ -1,0 +1,54 @@
+<?php
+session_start();
+
+if(isset ($_SESSION["UID"])) {
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset ="UTF-8">
+<title> Coollection Page</title>
+</head>
+
+<body>
+<h1> <b style="color:pink;"> Song Registration Form </b></h1>
+<h4> <b style="color:purple;">Enter song details: </b></h4>
+
+<p><i><b style="color:red;">* ALL fields are required</b></i></p>
+
+<form name="registerForm" action="song_register.php" method="POST">
+
+Song Title: <input type="text" name="Title" maxlength="30" required>
+<br><br>
+Artist/Band Name: <input type="text" name="Artist_BandName" maxlength="30" required>
+<br><br>
+Link <i>(Audio/Video)</i>: <input type="link" name="Link" required>
+<br><br>
+Genre: <select name="Genre" required>
+<option value="" disabled selected > - Song Genres - </option>
+<option value="Jazz"> Jazz </option>
+<option value="RnB"> RnB </option>
+<option value="Pop"> Pop Music </option>
+<option value="Ballad"> Ballad </option>
+</select>
+<br><br>
+Language: <input type="radio" name="Language" value="Malay" checked> Malay
+<input type="radio" name="Language" value="English" > English
+<input type="radio" name="Language" value="Korean" > Korean
+<input type="radio" name="Language" value="Japanese" > Japanese
+<br><br>
+Release Date: <input type="date" name="ReleaseDate" required>
+<br><br>
+<input type="submit" value="Display Song Details">
+<input type="reset" value="Cancel">
+</form>
+</body>
+</html>
+<?php
+}
+else 
+{
+  echo "No session exists of session has expired. Please log in again.<br>";
+  echo"<a href='login.html'> Login </a>";
+}
+?>

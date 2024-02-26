@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset= "UTF-8">
+    <title>Collection Page</title>
+    <style>
+        body {
+            background-image: url("wpp3.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: georgia, serif;
+            color: #333;
+        }
+        .login-container {
+            width: 350px;
+            background-color: #f9e9d6;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px); 
+            padding: 10px; 
+            margin-bottom: 15px;
+            border: 1px solid #fbf0e4;
+            border-radius: 20px; 
+            font-size: 14px; 
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px; 
+            background-color: #eab676;
+            color: white;
+            border: none;
+            border-radius: 10px; 
+            cursor: pointer;
+            margin-right: 10px;
+            font-family: gerogia, serif;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #eab676;
+        }
+        span.required {
+            color: red;
+        }
+        i {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2 style="text-align: center;"> 🎧 COOLLECTION 🎧 </h2>
+    <p style="text-align: center;">Enter :</p>
+    <form name="signUpForm" action="signUp_success.php" method="POST">
+        <label for="userID">Create an Username or UserID <span class="required">**</span></label>
+        <input type="text" name="userID" id="userID" maxlength="10" required>
+        <br><br>
+        <label for="password"> Create a Password <span class="required">**</span></label>
+        <input type="password" name="password" required>
+        <label for="confirm_password"> Re-confirm Password <span class="required">**</span></label>
+        <input type="password" name="confirm_password" required>
+        <br><br>
+
+        <i><span class="required">Fields with ** are compulsory</span></i>
+        <br><br>
+        <button onclick="validatePasswords()">Register</button>
+    </form>
+</div>
+<script>
+    function validatePasswords() {
+    var password = document.getElementsByName("password")[0].value;
+    var confirm_password = document.getElementsByName("confirm_password")[0].value;
+
+    if (password != confirm_password) {
+        alert("Passwords do not match. Please try again.");
+        return false;
+    }
+
+    return true;
+    }
+
+    document.querySelector('form').addEventListener('submit', function(e) {
+    if (!validatePasswords()) {
+        e.preventDefault();
+    }
+    });
+</script>
+</body>
+</html>
